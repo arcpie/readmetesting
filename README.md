@@ -65,13 +65,13 @@ $ python manage.py migrate
 
 ## API End Points
 
----
-
 ## Users
 
 #### User Login
 > HTTP Method: GET
+
 > Endpoint: /users/login/
+
 > Authorization: None
 
 #### Request Payload 

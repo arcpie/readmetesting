@@ -1,6 +1,6 @@
-# Project Title
+# Flatentals
 
-One Paragraph of project description goes here
+Flatentals is a web-app that manages apartment rentals. The font-end is developed using ReactJS and the back-end APIs are written in Python Django.
 
 ## Getting Started
 

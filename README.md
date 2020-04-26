@@ -2,28 +2,15 @@
 
 Flatentals is a web-app that manages apartment rentals. The font-end is developed using ReactJS and the back-end APIs are written in Python Django.
 
-## Super simple to use
-
-Request is designed to be the simplest way possible to make http calls. It supports HTTPS and follows redirects by default.
-
-```js
-const request = require('request');
-request('http://www.google.com', function (error, response, body) {
-  console.error('error:', error); // Print the error if one occurred
-  console.log('statusCode:', response && response.statusCode); // Print the response status code if a response was received
-  console.log('body:', body); // Print the HTML for the Google homepage.
-});
-```
-
-
 ## Django - Getting Started
 
-These instructions will get you a copy of the project up and running on your local machine.
+These instructions will get you a copy of the projects back-end up and running on your local machine.
 
 ### Prerequisites
 ```
 Python
 Pip
+virtualenv
 ```
 
 ### Setup
@@ -76,9 +63,56 @@ $ python manage.py makemigrations
 $ python manage.py migrate
 ```
 
+## API End Points
+
+---
+
+## Users
+
+#### User Login
+> HTTP Method: GET
+> Endpoint: /users/login/
+> Authorization: None
+
+#### Request Payload 
+```python
+{
+    "email": "client@gmail.com",
+    "password": "A@-#ksjSWj#"
+}
+```
+#### Sample Response Body 
+```python
+{
+    "access": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNTkwNDkwMjA0LCJqdGkiOiI2MDUwOTQ5YzkyYmI0OWUwYTMyNGUyNTFhZTJjNmM4YiIsInVzZXJfaWQiOjExfQ.tNbnttDFU_3fGB-M28cUd4-bSH6v1ZeP1Vxta3M-dV4",
+    "refresh": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoicmVmcmVzaCIsImV4cCI6MTU4Nzk4NDYwNCwianRpIjoiZDdmNTQzNDI1Y2IxNGUzMGI2YWJjMjM2MDVhMDc5ODYiLCJ1c2VyX2lkIjoxMX0.rJzeTr_BGDj6q17XqQ2UeRrbW7aR8HQh2iLjszAoFEU",
+    "user": {
+        "id": 1,
+        "email": "client@gmail.com",
+        "first_name": "John",
+        "last_name": "Terry",
+        "phone_number": "xxxx-xxxxxxx",
+        "role": "client"
+    }
+}
+``` 
+
+* **/api/users/login/** (User login endpoint)
+* **/api/users/logout/** (User logout endpoint)
+
+```python
+let generateProject = project => {
+  let code = [];
+  for (let js = 0; js < project.length; js++) {
+    code.push(js);
+  }
+};
+```
+
+---
 
 
-### Installing
+
 
 A step by step series of examples that tell you how to get a development env running
 

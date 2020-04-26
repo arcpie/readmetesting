@@ -45,11 +45,15 @@ DATABASES = {
 }
 ```
 
-> create and start virtual environment
+> create and activate virtual environment
+
+Creating the virtual environment
 
 ```shell
 $ virtualenv venv
 ```
+Activating the virtual environment
+
 Mac OS / Linux
 ```shell
 $ source venv/bin/activate
@@ -59,13 +63,13 @@ Windows
 $ venv\Scripts\activate
 ```
 
-> now install the dependencies using the requirements.txt file
+> install the dependencies using the requirements.txt file
 
 ```shell
 $ pip install -r requirements.txt
 ```
 
-> make migrations by running the following commands
+> make database migrations
 
 ```shell
 $ python manage.py makemigrations

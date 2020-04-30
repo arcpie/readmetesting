@@ -209,7 +209,7 @@ $ python manage.py migrate
 #### User Details
 > HTTP Method: GET
 
-> Endpoint: /user/<pk>/
+> Endpoint: /user/id/
 
 > Authorization: Bearer Token
 
@@ -229,7 +229,7 @@ $ python manage.py migrate
 #### User Update
 > HTTP Method: PUT
 
-> Endpoint: /user/<pk>/update/
+> Endpoint: /user/id/update/
 
 > Authorization: Bearer Token
 
@@ -259,7 +259,7 @@ $ python manage.py migrate
 #### User Delete
 > HTTP Method: DELETE
 
-> Endpoint: /user/<pk>/delete/
+> Endpoint: /user/id/delete/
 
 > Authorization: Bearer Token
 
@@ -377,7 +377,7 @@ $ python manage.py migrate
 #### Apartment Details
 > HTTP Method: GET
 
-> Endpoint: /apartment/<pk>/
+> Endpoint: /apartment/id/
 
 > Authorization: Bearer Token
 
@@ -409,7 +409,7 @@ $ python manage.py migrate
 #### Update Apartment
 > HTTP Method: PUT
 
-> Endpoint: /apartment/<pk>/update
+> Endpoint: /apartment/id/update
 
 > Authorization: Bearer Token
 
@@ -456,7 +456,7 @@ $ python manage.py migrate
 #### Apartment Delete
 > HTTP Method: DELETE
 
-> Endpoint: /apartment/<pk>/delete/
+> Endpoint: /apartment/id/delete/
 
 > Authorization: Bearer Token
 

@@ -67,6 +67,43 @@ $ python manage.py migrate
 
 ## Users
 
+#### Create User
+> HTTP Method: POST
+
+> Endpoint: /user/create/
+
+> Authorization: None
+
+#### Request Payload 
+```python
+{
+	"email": "client@gmail.com",
+	"password": "12345",
+	"first_name": "John",
+	"last_name": "Terry",
+	"phone_number": "xxxx-xxxxxxx",
+	"role": "client"
+}
+```
+
+#### Sample Response Body 
+```python
+{
+    "refresh": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoicmVmcmVzaCIsImV4cCI6MTU4ODM1MDg2OCwianRpIjoiMWE0YWRmN2E2Nzc3NGFlYmI5YzBhZTgwM2RlZjA4NzIiLCJ1c2VyX2lkIjoyMn0.0pwXL3RR7neDJpENUeW3VvMHjaEiodxTfdmeg-ZfLxQ",
+    "access": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNTg4MjY2MjY4LCJqdGkiOiJmNTkzZTM0ZTY3YjI0NTEyODQyYzU5ZDc5OGU3YmNjNyIsInVzZXJfaWQiOjIyfQ.3X8ThIpInv_V0Sq_VkyHgjD62gfvc1_F5t65iNUwiTI",
+    "user": {
+        "id": 1,
+        "email": "client@gmail.com",
+	    "password": "12345",
+	    "first_name": "John",
+	    "last_name": "Terry",
+	    "phone_number": "xxxx-xxxxxxx",
+	    "role": "client"
+    }
+}
+```
+---
+
 #### User Login
 > HTTP Method: GET
 
@@ -81,6 +118,7 @@ $ python manage.py migrate
     "password": "A@-#ksjSWj#"
 }
 ```
+
 #### Sample Response Body 
 ```python
 {
@@ -96,7 +134,6 @@ $ python manage.py migrate
     }
 }
 ``` 
-
 ---
 
 #### User List
@@ -118,7 +155,7 @@ $ python manage.py migrate
             "email": "realtor@gmail.com",
             "first_name": "Joey",
             "last_name": "Mark",
-            "phone_number": "xxxx-xxxxxx",
+            "phone_number": "xxxx-xxxxxxx",
             "role": "realtor"
         },
         {
@@ -126,12 +163,13 @@ $ python manage.py migrate
             "email": "client@gmail.com",
             "first_name": "Joey",
             "last_name": "Mark",
-            "phone_number": "xxxx-xxxxxx",
+            "phone_number": "xxxx-xxxxxxx",
             "role": "client"
         },
     ]
 }
 ``` 
+---
 
 #### Realtor List
 > HTTP Method: GET
@@ -152,7 +190,7 @@ $ python manage.py migrate
             "email": "realtor@gmail.com",
             "first_name": "Joey",
             "last_name": "Mark",
-            "phone_number": "xxxx-xxxxxx",
+            "phone_number": "xxxx-xxxxxxx",
             "role": "realtor"
         },
         {
@@ -160,9 +198,266 @@ $ python manage.py migrate
             "email": "joey@gmail.com",
             "first_name": "Joey",
             "last_name": "Mark",
-            "phone_number": "xxxx-xxxxxx",
+            "phone_number": "xxxx-xxxxxxx",
             "role": "realtor"
         },
     ]
 }
+```
+---
+
+#### User Details
+> HTTP Method: GET
+
+> Endpoint: /user/<pk>/
+
+> Authorization: Bearer Token
+
+#### Sample Response Body 
+```python
+{
+    "id": 1,
+    "email": "client@gmail.com",
+    "first_name": "John",
+    "last_name": "Terry",
+    "phone_number": "xxxx-xxxxxxx",
+    "role": "client"
+}
+``` 
+---
+
+#### User Update
+> HTTP Method: PUT
+
+> Endpoint: /user/<pk>/update/
+
+> Authorization: Bearer Token
+
+#### Request Payload 
+```python
+{
+	"password": "12345",
+	"first_name": "first name",
+	"last_name": "last name",
+	"phone_number": "xxxx-xxxxxxx"
+}
+```
+
+#### Sample Response Body 
+```python
+{
+    "email": "client@gmail.com",
+    "password": "12345",
+	"first_name": "first name",
+	"last_name": "last name",
+	"phone_number": "xxxx-xxxxxxx",
+    "role": "client"
+}
+``` 
+---
+
+#### User Delete
+> HTTP Method: DELETE
+
+> Endpoint: /user/<pk>/delete/
+
+> Authorization: Bearer Token
+
+---
+
+## Apartments
+
+#### Create Apartment
+> HTTP Method: POST
+
+> Endpoint: /apartment/create/
+
+> Authorization: Bearer Token
+
+#### Request Payload 
+```python
+{
+	"name": "Apartment 1",
+	"description": "This is apartment description",
+	"floor_area_size": 500,
+	"price_per_month": 99.99,
+	"num_rooms": 4,
+	"latitude": 33.33,
+	"longitude": 45,
+	"realtor_id": 1
+}
+```
+
+#### Sample Response Body 
+```python
+{
+    "id": 1,
+	"name": "Apartment 1",
+	"description": "This is apartment description",
+	"floor_area_size": 500,
+	"price_per_month": 99.99,
+	"num_rooms": 4,
+	"latitude": 33.33,
+	"longitude": 45,
+	"realtor_id": 1
+}
+```
+---
+
+#### Apartment List
+> HTTP Method: GET
+
+> Endpoint: /apartment/list/
+
+> Authorization: Bearer Token
+
+#### Filter Parameters
+```
+{
+    "min_size":50,
+    "max_size":200,
+    "min_price":100,
+    "max_price":500,
+    "min_rooms":2,
+    "max_rooms":4
+}
+```
+
+#### Sample Response Body 
+```python
+{
+    "count": 10,
+    "next": null,
+    "previous": null,
+    "results": [
+        {
+            "id": 1,
+            "name": "Apartment 1",
+            "description": "This is apartment description",
+            "floor_area_size": 123.455,
+            "price_per_month": 34.22,
+            "num_rooms": 2,
+            "latitude": "-9.33456600",
+            "longitude": "18.23440000",
+            "state": "available",
+            "added_date": "2020-04-30",
+            "realtor": {
+                "id": 1,
+                "email": "realtor@gmail.com",
+                "first_name": "John",
+                "last_name": "Terry",
+                "phone_number": "xxxx-xxxxxxx",
+                "role": "realtor"
+            }
+        },
+        {
+            "id": 2,
+            "name": "Apartment 2",
+            "description": "This is apartment description",
+            "floor_area_size": 123.455,
+            "price_per_month": 34.22,
+            "num_rooms": 2,
+            "latitude": "-43.33456600",
+            "longitude": "55.23440000",
+            "state": "available",
+            "added_date": "2020-04-30",
+            "realtor": {
+                "id": 1,
+                "email": "realtor@gmail.com",
+                "first_name": "John",
+                "last_name": "Terry",
+                "phone_number": "xxxx-xxxxxxx",
+                "role": "realtor"
+            }
+        },
+}
+```
+---
+
+#### Apartment Details
+> HTTP Method: GET
+
+> Endpoint: /apartment/<pk>/
+
+> Authorization: Bearer Token
+
+#### Sample Response Body 
+```python
+{
+    "id": 1,
+    "name": "Apartment 1",
+    "description": "This is apartment description",
+    "floor_area_size": 123.455,
+    "price_per_month": 34.22,
+    "num_rooms": 5,
+    "latitude": "12.33456600",
+    "longitude": "123.23440000",
+    "state": "rented",
+    "added_date": "2020-04-23",
+    "realtor": {
+        "id": 1,
+        "email": "realtor@gmail.com",
+        "first_name": "John",
+        "last_name": "Terry",
+        "phone_number": "xxxx-xxxxxxx",
+        "role": "realtor"
+    }
+}
+```
+---
+
+#### Update Apartment
+> HTTP Method: PUT
+
+> Endpoint: /apartment/<pk>/update
+
+> Authorization: Bearer Token
+
+#### Request Payload 
+```python
+{
+	"name": "Apartment 1",
+	"description": "This is apartment description",
+	"floor_area_size": 500,
+	"price_per_month": 99.99,
+	"num_rooms": 4,
+	"latitude": 33.33,
+	"longitude": 45,
+	"realtor_id": 1,
+	"state": "rented",
+}
+```
+
+#### Sample Response Body 
+```python
+{
+    "id": 1,
+    "name": "Apartment 1",
+    "description": "This is apartment description",
+    "floor_area_size": 123.455,
+    "price_per_month": 34.22,
+    "num_rooms": 5,
+    "latitude": "12.33456600",
+    "longitude": "123.23440000",
+    "state": "rented",
+    "added_date": "2020-04-23",
+    "realtor": {
+        "id": 1,
+        "email": "realtor@gmail.com",
+        "first_name": "John",
+        "last_name": "Terry",
+        "phone_number": "xxxx-xxxxxxx",
+        "role": "realtor"
+    }
+}
+```
+---
+
+#### Apartment Delete
+> HTTP Method: DELETE
+
+> Endpoint: /apartment/<pk>/delete/
+
+> Authorization: Bearer Token
+
 ---

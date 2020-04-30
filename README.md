@@ -70,7 +70,7 @@ $ python manage.py migrate
 #### User Login
 > HTTP Method: GET
 
-> Endpoint: /users/login/
+> Endpoint: /user/login/
 
 > Authorization: None
 
@@ -102,7 +102,7 @@ $ python manage.py migrate
 #### User List
 > HTTP Method: GET
 
-> Endpoint: /users/list/
+> Endpoint: /user/list/
 
 > Authorization: Bearer Token
 
@@ -133,4 +133,36 @@ $ python manage.py migrate
 }
 ``` 
 
+#### Realtor List
+> HTTP Method: GET
+
+> Endpoint: /user/realtorlist/
+
+> Authorization: Bearer Token
+
+#### Sample Response Body 
+```python
+{
+    "count": 2,
+    "next": null,
+    "previous": null,
+    "results": [
+        {
+            "id": 1,
+            "email": "realtor@gmail.com",
+            "first_name": "Joey",
+            "last_name": "Mark",
+            "phone_number": "xxxx-xxxxxx",
+            "role": "realtor"
+        },
+        {
+            "id": 2,
+            "email": "joey@gmail.com",
+            "first_name": "Joey",
+            "last_name": "Mark",
+            "phone_number": "xxxx-xxxxxx",
+            "role": "realtor"
+        },
+    ]
+}
 ---

@@ -2,6 +2,31 @@
 
 Flatentals is a web-app that manages apartment rentals. The font-end is developed using ReactJS and the back-end APIs are written in Python Django.
 
+## React - Getting Started
+
+These instructions will get you a copy of the projects front-end up and running on your local machine.
+
+### Prerequisites
+```
+node.js
+npm/yarn
+```
+
+### Setup
+
+- Clone the front-end repo on your system.
+
+> install node dependencies/modules
+```shell
+$ npm install
+```
+
+> run the server
+
+```shell
+$ npm start
+```
+
 ## Django - Getting Started
 
 These instructions will get you a copy of the projects back-end up and running on your local machine.
@@ -61,6 +86,12 @@ $ pip install -r requirements.txt
 ```shell
 $ python manage.py makemigrations
 $ python manage.py migrate
+```
+
+> run the server
+
+```shell
+$ python manage.py runserver
 ```
 
 ## API End Points
@@ -461,3 +492,4 @@ $ python manage.py migrate
 > Authorization: Bearer Token
 
 ---
+

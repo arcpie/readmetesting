@@ -120,7 +120,6 @@ $ python manage.py runserver
 #### Sample Response Body 
 ```python
 {
-    "refresh": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoicmVmcmVzaCIsImV4cCI6MTU4ODM1MDg2OCwianRpIjoiMWE0YWRmN2E2Nzc3NGFlYmI5YzBhZTgwM2RlZjA4NzIiLCJ1c2VyX2lkIjoyMn0.0pwXL3RR7neDJpENUeW3VvMHjaEiodxTfdmeg-ZfLxQ",
     "access": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNTg4MjY2MjY4LCJqdGkiOiJmNTkzZTM0ZTY3YjI0NTEyODQyYzU5ZDc5OGU3YmNjNyIsInVzZXJfaWQiOjIyfQ.3X8ThIpInv_V0Sq_VkyHgjD62gfvc1_F5t65iNUwiTI",
     "user": {
         "id": 1,
@@ -154,7 +153,6 @@ $ python manage.py runserver
 ```python
 {
     "access": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNTkwNDkwMjA0LCJqdGkiOiI2MDUwOTQ5YzkyYmI0OWUwYTMyNGUyNTFhZTJjNmM4YiIsInVzZXJfaWQiOjExfQ.tNbnttDFU_3fGB-M28cUd4-bSH6v1ZeP1Vxta3M-dV4",
-    "refresh": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoicmVmcmVzaCIsImV4cCI6MTU4Nzk4NDYwNCwianRpIjoiZDdmNTQzNDI1Y2IxNGUzMGI2YWJjMjM2MDVhMDc5ODYiLCJ1c2VyX2lkIjoxMX0.rJzeTr_BGDj6q17XqQ2UeRrbW7aR8HQh2iLjszAoFEU",
     "user": {
         "id": 1,
         "email": "client@gmail.com",

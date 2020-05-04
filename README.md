@@ -124,11 +124,11 @@ $ python manage.py runserver
     "user": {
         "id": 1,
         "email": "client@gmail.com",
-	    "password": "12345",
-	    "first_name": "John",
-	    "last_name": "Terry",
-	    "phone_number": "xxxx-xxxxxxx",
-	    "role": "client"
+        "password": "12345",
+        "first_name": "John",
+        "last_name": "Terry",
+        "phone_number": "xxxx-xxxxxxx",
+        "role": "client"
     }
 }
 ```

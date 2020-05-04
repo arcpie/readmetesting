@@ -306,14 +306,14 @@ $ python manage.py runserver
 #### Request Payload 
 ```python
 {
-	"name": "Apartment 1",
-	"description": "This is apartment description",
-	"floor_area_size": 500,
-	"price_per_month": 99.99,
-	"num_rooms": 4,
-	"latitude": 33.33,
-	"longitude": 45,
-	"realtor_id": 1
+    "name": "Apartment 1",
+    "description": "This is apartment description",
+    "floor_area_size": 500,
+    "price_per_month": 99.99,
+    "num_rooms": 4,
+    "latitude": 33.33,
+    "longitude": 45,
+    "realtor_id": 1
 }
 ```
 
@@ -329,12 +329,13 @@ $ python manage.py runserver
 	"latitude": 33.33,
 	"longitude": 45,
 	"realtor": {
-        "id": 1,
-        "email": "realtor@gmail.com",
-        "first_name": "John",
-        "last_name": "Terry",
-        "phone_number": "xxxx-xxxxxxx",
-        "role": "realtor"
+                "id": 1,
+                "email": "realtor@gmail.com",
+                "first_name": "John",
+                "last_name": "Terry",
+                "phone_number": "xxxx-xxxxxxx",
+                "role": "realtor"
+            }
     }
 
 }

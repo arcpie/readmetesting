@@ -277,9 +277,9 @@ $ python manage.py runserver
 {
     "email": "client@gmail.com",
     "password": "12345",
-	"first_name": "first name",
-	"last_name": "last name",
-	"phone_number": "xxxx-xxxxxxx",
+    "first_name": "first name",
+    "last_name": "last name",
+    "phone_number": "xxxx-xxxxxxx",
     "role": "client"
 }
 ``` 
@@ -335,9 +335,7 @@ $ python manage.py runserver
         "last_name": "Terry",
         "phone_number": "xxxx-xxxxxxx",
         "role": "realtor"
-        }
     }
-
 }
 ```
 ---

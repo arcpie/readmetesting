@@ -328,7 +328,15 @@ $ python manage.py runserver
 	"num_rooms": 4,
 	"latitude": 33.33,
 	"longitude": 45,
-	"realtor_id": 1
+	"realtor": {
+        "id": 1,
+        "email": "realtor@gmail.com",
+        "first_name": "John",
+        "last_name": "Terry",
+        "phone_number": "xxxx-xxxxxxx",
+        "role": "realtor"
+    }
+
 }
 ```
 ---
@@ -343,12 +351,12 @@ $ python manage.py runserver
 #### Filter Parameters
 ```
 {
-    "min_size":50,
-    "max_size":200,
-    "min_price":100,
-    "max_price":500,
-    "min_rooms":2,
-    "max_rooms":4
+    "min_size": 50,
+    "max_size": 200,
+    "min_price": 100,
+    "max_price": 500,
+    "min_rooms": 2,
+    "max_rooms": 4
 }
 ```
 

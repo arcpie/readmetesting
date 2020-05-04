@@ -265,10 +265,10 @@ $ python manage.py runserver
 #### Request Payload 
 ```python
 {
-	"password": "12345",
-	"first_name": "first name",
-	"last_name": "last name",
-	"phone_number": "xxxx-xxxxxxx"
+    "password": "12345",
+    "first_name": "first name",
+    "last_name": "last name",
+    "phone_number": "xxxx-xxxxxxx"
 }
 ```
 
@@ -321,21 +321,21 @@ $ python manage.py runserver
 ```python
 {
     "id": 1,
-	"name": "Apartment 1",
-	"description": "This is apartment description",
-	"floor_area_size": 500,
-	"price_per_month": 99.99,
-	"num_rooms": 4,
-	"latitude": 33.33,
-	"longitude": 45,
-	"realtor": {
-                "id": 1,
-                "email": "realtor@gmail.com",
-                "first_name": "John",
-                "last_name": "Terry",
-                "phone_number": "xxxx-xxxxxxx",
-                "role": "realtor"
-            }
+    "name": "Apartment 1",
+    "description": "This is apartment description",
+    "floor_area_size": 500,
+    "price_per_month": 99.99,
+    "num_rooms": 4,
+    "latitude": 33.33,
+    "longitude": 45,
+    "realtor": {
+        "id": 1,
+        "email": "realtor@gmail.com",
+        "first_name": "John",
+        "last_name": "Terry",
+        "phone_number": "xxxx-xxxxxxx",
+        "role": "realtor"
+        }
     }
 
 }
